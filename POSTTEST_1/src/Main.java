@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 ArrayList<Produk> listProduk = new ArrayList<>();
         Scanner input = new Scanner(System.in);
