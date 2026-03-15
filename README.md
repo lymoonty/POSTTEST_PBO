@@ -49,3 +49,26 @@ Program ini menggunakan `ArrayList` sebagai media penyimpanan dinamis. Operasi y
 6. ![Hapus Produk](Screenshots/hapus_produk.png)
 7. ![Hasil Hapus](Screenshots/tampilan_setelah_dihapus.png)
 8. ![Keluar](Screenshots/keluar.png)
+
+# Posttest 2: Encapsulation
+Pada tahap ini, dilakukan implementasi Encapsulation untuk meningkatkan keamanan data dengan membatasi akses langsung ke atribut objek.
+
+## 1. Access Modifiers
+Private: Diterapkan pada semua atribut (ID, Nama, Harga, Rasa, Material). Data kini terlindungi dan tidak bisa diakses langsung dari luar class.
+Public: Digunakan pada constructor dan method (Getter/Setter) sebagai akses resmi untuk mengelola data.
+
+## 2. Getter dan Setter
+Program kini menggunakan metode "pintu masuk" untuk interaksi data:
+Getter: Mengambil nilai atribut (contoh: getId()).
+Setter: Mengubah nilai atribut (contoh: setHarga()). Digunakan pada fitur Update untuk memvalidasi perubahan data secara aman.
+
+## 3. Perubahan Struktur Class
+Produk (Parent): Atribut diubah menjadi private, dilengkapi Getter dan Setter.
+MakananHewan & Aksesoris (Child): Memiliki atribut spesifik private serta metode aksesnya sendiri.
+Main: Logika CRUD diperbarui menggunakan metode Setter, serta penambahan casting objek untuk mengedit atribut khusus (Rasa/Material).
+
+## Screenshot Output
+
+
+
+
