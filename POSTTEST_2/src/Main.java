@@ -86,9 +86,9 @@ public class Main {
         for (Produk p : listProduk) {
             if (p.getId().equalsIgnoreCase(cari)) {
                 System.out.print("Nama baru: ");
-                p.setNama(input.nextLine()); // Menggunakan Setter
+                p.setNama(input.nextLine()); 
                 System.out.print("Harga baru: ");
-                p.setHarga(input.nextDouble()); // Menggunakan Setter
+                p.setHarga(input.nextDouble()); 
                 input.nextLine();
 
                 if (p instanceof MakananHewan) {
