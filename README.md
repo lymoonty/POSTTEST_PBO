@@ -68,7 +68,7 @@ MakananHewan & Aksesoris (Child): Memiliki atribut spesifik private serta metode
 Main: Logika CRUD diperbarui menggunakan metode Setter, serta penambahan casting objek untuk mengedit atribut khusus (Rasa/Material).
 
 ## Screenshot Output
-
+1. !![Saat mengedit maka varian rasa juga bisa dirubah](Screenshot/ssan_pt_2.png)
 
 
 
