@@ -41,14 +41,14 @@ Program ini menggunakan `ArrayList` sebagai media penyimpanan dinamis. Operasi y
 ## Screenshot Output
 
 
-1. ![Tampilan Menu](Screenshots/TampilanMenu_tambahstok.png)
-2. ![Tambah Stok](Screenshots/tambah_stok.png)
-3. ![Menampilkan Produk](Screenshots/menampilkan_semua_stok.png)
-4. ![Edit Produk](Screenshots/mengedit_data.png)
-5. ![Hasil Edit](Screenshots/tampilan_setelah_diedit.png)
-6. ![Hapus Produk](Screenshots/hapus_produk.png)
-7. ![Hasil Hapus](Screenshots/tampilan_setelah_dihapus.png)
-8. ![Keluar](Screenshots/keluar.png)
+1. ![Tampilan Menu](./screenshot/TampilanMenu_tambahstok.png)
+2. ![Tambah Stok](./screenshot/tambah_stok.png)
+3. ![Menampilkan Produk](./screenshot/menampilkan_semua_stok.png)
+4. ![Edit Produk](./screenshot/mengedit_data.png)
+5. ![Hasil Edit](./screenshot/tampilan_setelah_diedit.png)
+6. ![Hapus Produk](./screenshot/hapus_produk.png)
+7. ![Hasil Hapus](./screenshot/tampilan_setelah_dihapus.png)
+8. ![Keluar](./screenshot/keluar.png)
 
 # Posttest 2: Encapsulation
 Pada tahap ini, dilakukan implementasi Encapsulation untuk meningkatkan keamanan data dengan membatasi akses langsung ke atribut objek.
