@@ -118,11 +118,14 @@ Edit Data Produk (Update): Mengubah data berdasarkan ID. Menggunakan keyword ins
 Hapus Produk (Delete): Menghapus data dari ArrayList berdasarkan ID yang diinputkan.
 
 ## Cara Menjalankan Program
-1.Buka project di IDE (IntelliJ IDEA/NetBeans/VS Code).
-2.Pastikan semua file class (Produk.java, MakananHewan.java, MakananKucing.java, Aksesoris.java, dan Main.java) berada dalam satu package/folder yang sama.
-3.Jalankan Main.java.
-4.Gunakan menu interaktif untuk mengelola stok pet shop.
+1. Buka project di IDE (IntelliJ IDEA/NetBeans/VS Code).
+2. Pastikan semua file class (Produk.java, MakananHewan.java, MakananKucing.java, Aksesoris.java, dan Main.java) berada dalam satu package/folder yang sama.
+3. Jalankan Main.java.
+4. Gunakan menu interaktif untuk mengelola stok pet shop.
 
 ## Screenshot Output 
+1. ![Tambah Stok](./screenshot/tambah_stok_mdl4.png)
+2. ![Menampilkan Produk](./screenshot/cek_stok_mdl4.png)
+3. ![Edit Produk](./screenshot/edit_stok_mdl4.png)
 
 
