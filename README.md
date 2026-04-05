@@ -71,5 +71,58 @@ Main: Logika CRUD diperbarui menggunakan metode Setter, serta penambahan casting
 Saat mengedit maka varian rasa juga bisa dirubah 
 1. ![Saat mengedit maka varian rasa juga bisa dirubah](./screenshot/ssan_pt_2.png)
 
+# Posttest 3: Inheritance
+Berdasarkan Modul 4, program ini menerapkan dua jenis inheritance:
+Hierarchical Inheritance: Class Produk bertindak sebagai Superclass yang diwarisi oleh dua Subclass berbeda, yaitu MakananHewan dan Aksesoris.
+
+Multilevel Inheritance: Class MakananKucing mewarisi Class MakananHewan, yang mana MakananHewan sendiri adalah turunan dari Produk. Ini membentuk hirarki berjenjang: Produk -> MakananHewan -> MakananKucing.
+
+## Daftar Class:
+
+Class Produk (Superclass): Menyimpan atribut dasar semua barang (ID, Nama, Harga). Menggunakan access modifier protected agar atribut dapat diakses langsung oleh subclass-nya.
+
+Class MakananHewan (Subclass): Menambahkan atribut spesifik rasa.
+
+Class MakananKucing (Subclass dari MakananHewan): Menambahkan atribut spesifik jenis (seperti Basah atau Kering).
+
+Class Aksesoris (Subclass): Menambahkan atribut spesifik material.
+
+## Implementasi Konsep Modul 4
+
+Relasi Is-A:
+
+MakananHewan is-a Produk.
+
+Aksesoris is-a Produk.
+
+MakananKucing is-a MakananHewan.
+
+Keyword extends: Digunakan pada deklarasi class untuk menghubungkan subclass dengan superclass-nya.
+
+Keyword super:
+
+- super() digunakan pada constructor subclass untuk menginisialisasi atribut yang ada di superclass.
+
+- super.tampilkanData() digunakan untuk memanggil fungsi cetak data dari parent class sebelum menambahkan informasi spesifik subclass (Method Overriding).
+
+Method Overriding: Subclass menulis ulang method tampilkanData() untuk menyesuaikan informasi yang ditampilkan sesuai kategori produk.
+
+## Fitur Program
+
+Tambah Stok (Create): Admin dapat memilih 3 kategori (Makanan Umum, Makanan Kucing, atau Aksesoris). Data disimpan ke dalam satu ArrayList<Produk>.
+
+Cek Semua Stok (Read): Menampilkan seluruh data dengan format yang berbeda-beda tergantung tipe objeknya (Polimorfisme).
+
+Edit Data Produk (Update): Mengubah data berdasarkan ID. Menggunakan keyword instanceof untuk mendeteksi tipe objek agar atribut spesifik (Rasa/Jenis/Material) dapat diedit dengan benar.
+
+Hapus Produk (Delete): Menghapus data dari ArrayList berdasarkan ID yang diinputkan.
+
+## Cara Menjalankan Program
+1.Buka project di IDE (IntelliJ IDEA/NetBeans/VS Code).
+2.Pastikan semua file class (Produk.java, MakananHewan.java, MakananKucing.java, Aksesoris.java, dan Main.java) berada dalam satu package/folder yang sama.
+3.Jalankan Main.java.
+4.Gunakan menu interaktif untuk mengelola stok pet shop.
+
+## Screenshot Output 
 
 
