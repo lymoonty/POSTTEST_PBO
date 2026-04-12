@@ -142,20 +142,20 @@ Implementasi:
 - hitungTotal(int qty, double diskon): Menghitung total harga dengan potongan promo (misal: Diskon 15%).
 
 2. Method Overriding
-Diterapkan antara superclass Produk dan subclass MakananHewan serta Aksesoris. Tujuannya agar setiap kategori produk memiliki perilaku unik saat method tertentu dipanggil.
+Diterapkan antara superclass Produk dan subclass MakananHewan, MakananKucing serta Aksesoris. Tujuannya agar setiap kategori produk memiliki perilaku unik saat method tertentu dipanggil.
 - Aturan: Nama method, parameter, dan return type identik dengan parent. Menggunakan annotation @Override.
 Implementasi:
 - hitungOngkir():
-- Di Produk: Return Rp10.000 (Standar).
-- Di MakananHewan: Return Rp5.000 (Karena barang ringan/tahan banting).
-- Di Aksesoris: Return Rp7.000 (Karena butuh packing bubble wrap/khusus).
-- getInfoDetail(): Menampilkan string informasi spesifik (Varian Rasa atau Bahan Material).
+- Di Produk: Return Rp10.000.
+- Di MakananHewan & MakananKucing: Return Rp5.000.
+- Di Aksesoris: Return Rp7.000.
+- getInfoDetail(): Menampilkan string informasi spesifik.
 
 ## Struktur Class & Perubahan
 1. Class Produk (Superclass):
 Menambahkan method hitungTotal() (2 versi/overload).
 Menambahkan base method hitungOngkir() dan getInfoDetail() untuk di-override.
-2. Class MakananHewan & Aksesoris (Subclass):
+2. Class MakananHewan, MakananKucing & Aksesoris (Subclass):
 Melakukan @Override pada hitungOngkir() dan getInfoDetail() dengan logika bisnis masing-masing.
 3. Class Main:
 Menambahkan menu "5. Simulasi Belanja". Menu ini mendemokasikan Polymorphism secara logis: user menginput jumlah beli, sistem otomatis menghitung diskon (jika qty >= 3) dan menambahkan ongkir sesuai jenis barang.
@@ -164,8 +164,9 @@ Menambahkan menu "5. Simulasi Belanja". Menu ini mendemokasikan Polymorphism sec
 Selain fitur CRUD dasar, program kini memiliki fitur simulasi transaksi cerdas:
 1. Tambah Stok : Input data Makanan atau Aksesoris.
 2. Cek Stok : Melihat daftar barang.
-3. Edit & Hapus: Manajemen data standar.
-4. Simulasi Belanja :
+3. Edit : Mengedit stok.
+4. Hapus: Menghapus stok.
+5. Simulasi Belanja :
 - User memilih barang dan memasukkan jumlah (qty).
 - Sistem menggunakan Overloading untuk memilih rumus harga (dengan/tanpa diskon).
 - Sistem menggunakan Overriding untuk menentukan ongkir yang tepat.
