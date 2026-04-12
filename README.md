@@ -128,4 +128,57 @@ Hapus Produk (Delete): Menghapus data dari ArrayList berdasarkan ID yang diinput
 2. ![Menampilkan Produk](./screenshot/cek_stok_mdl4.png)
 3. ![Edit Produk](./screenshot/edit_stok_mdl4.png)
 
+# POSTTEST 4
+Program ini adalah aplikasi manajemen stok dan simulasi transaksi untuk sebuah Pet Shop. Pada tahap ini (Posttest 4), fokus utama pengembangan adalah menerapkan konsep Polymorphism (Polimorfisme) sesuai Modul 5. Polimorfisme memungkinkan program untuk memproses objek dari berbagai subclass (MakananHewan dan Aksesoris) melalui referensi superclass (Produk) secara seragam, namun dengan hasil eksekusi yang spesifik sesuai jenis objeknya. Penerapan ini mencakup Method Overloading untuk perhitungan harga fleksibel, dan Method Overriding untuk menangani perbedaan aturan bisnis seperti biaya pengiriman.
 
+Berdasarkan Modul 5, Polymorphism terbagi menjadi dua jenis yang diterapkan dalam sistem ini:
+
+## 1. Method Overloading
+Diterapkan di dalam class Produk. Tujuannya adalah memudahkan perhitungan total belanja dengan variasi parameter yang berbeda namun nama method yang sama.
+Aturan: Nama method sama, return type sama (double), tetapi parameter berbeda.
+Implementasi:
+hitungTotal(int qty): Menghitung total harga dasar (Harga × Jumlah).
+hitungTotal(int qty, double diskon): Menghitung total harga dengan potongan promo (misal: Diskon 15%).
+Logika: Keputusan method mana yang dipanggil ditentukan saat kompilasi berdasarkan argumen yang diberikan.
+
+## 2. Method Overriding
+Diterapkan antara superclass Produk dan subclass MakananHewan serta Aksesoris. Tujuannya agar setiap kategori produk memiliki perilaku unik saat method tertentu dipanggil.
+Aturan: Nama method, parameter, dan return type identik dengan parent. Menggunakan annotation @Override.
+Implementasi:
+hitungOngkir():
+Di Produk: Return Rp10.000 (Standar).
+Di MakananHewan: Return Rp5.000 (Karena barang ringan/tahan banting).
+Di Aksesoris: Return Rp7.000 (Karena butuh packing bubble wrap/khusus).
+getInfoDetail(): Menampilkan string informasi spesifik (Varian Rasa atau Bahan Material).
+Logika: Keputusan method mana yang dijalankan ditentukan saat runtime oleh JVM berdasarkan tipe objek sebenarnya yang disimpan di memori.
+
+## Struktur Class & Perubahan
+Class Produk (Superclass):
+Menambahkan method hitungTotal() (2 versi/overload).
+Menambahkan base method hitungOngkir() dan getInfoDetail() untuk di-override.
+Class MakananHewan & Aksesoris (Subclass):
+Melakukan @Override pada hitungOngkir() dan getInfoDetail() dengan logika bisnis masing-masing.
+Class Main:
+Menambahkan menu "5. Simulasi Belanja". Menu ini mendemokasikan Polymorphism secara logis: user menginput jumlah beli, sistem otomatis menghitung diskon (jika qty >= 3) dan menambahkan ongkir sesuai jenis barang.
+
+## Fitur Program 
+Selain fitur CRUD dasar, program kini memiliki fitur simulasi transaksi cerdas:
+Tambah Stok : Input data Makanan atau Aksesoris.
+Cek Stok : Melihat daftar barang.
+Edit & Hapus: Manajemen data standar.
+Simulasi Belanja :
+User memilih barang dan memasukkan jumlah (qty).
+Sistem menggunakan Overloading untuk memilih rumus harga (dengan/tanpa diskon).
+Sistem menggunakan Overriding untuk menentukan ongkir yang tepat.
+Output berupa struk belanja lengkap yang transparan.
+
+## Cara Menjalankan Program
+1. Pastikan JDK terinstal.
+2. Buka proyek di IntelliJ IDEA/VS Code.
+3. Jalankan Main.java.
+4. Pilih menu 1 untuk menambah minimal 1 Makanan dan 1 Aksesoris.
+5. Pilih menu 5 (Simulasi Belanja) untuk melihat Polymorphism bekerja. Masukkan jumlah beli 3 atau lebih untuk memicu logika diskon.
+
+## Screenshoot Output
+1. ![Menampilkan_menu](./screenshot/menu_awal.png)
+2. ![Hasil](./screenshot/output_akhir.png)
