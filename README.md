@@ -219,6 +219,6 @@ public abstract class Produk implements InfoProduk
 - Dinamis di Kasir: Saat simulasi belanja, sistem otomatis menyesuaikan informasi ongkir dan detail produk berdasarkan tipe barang yang dipilih. Ini membuktikan bahwa Abstraction, Interface, dan Polymorphism berjalan beriringan tanpa perlu pengecekan tipe manual (instanceof) untuk memanggil method khusus.
 
 ## SS program
-1.  ![Menampilkan_Struk](./screenshot/Struk.png)
+1.  ![Menampilkan_Struk](./screenshot/struk.png)
 
 Hnya menampilkan itu karena outputnya sama saja seperti di posttest sebelumnya yang berubah hanya di codenya saja, SSan tersebut hanya agar mengetahui bahwa codenya bisa dijalankan dan tidak error.
