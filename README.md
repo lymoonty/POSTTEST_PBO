@@ -182,3 +182,43 @@ Selain fitur CRUD dasar, program kini memiliki fitur simulasi transaksi cerdas:
 ## Screenshoot Output
 1. ![Menampilkan_menu](./screenshot/menu_awal.png)
 2. ![Hasil](./screenshot/output_akhir.png)
+
+
+# POSTTEST 5
+pengembangan pada tahap ini berfokus pada penerapan konsep Abstraction dan Interface untuk meningkatkan arsitektur, keamanan desain, dan pemaksaan kontrak program. Abstraction digunakan untuk menyembunyikan detail implementasi kompleks dan hanya menampilkan fungsi esensial, sedangkan Interface berperan sebagai perjanjian yang wajib dipenuhi oleh class pengimplementasinya.
+
+## 1. Abstract Class (Produk)
+- Class induk Produk diubah menjadi public abstract class Produk.
+- Sesuai dengan modul: "Abstract class tidak dapat dibuat objeknya". Percobaan new Produk() akan menghasilkan error compile-time.
+- Namun, Produk tetap dapat memiliki constructor, concrete method (tampilkanData(), hitungTotal()), dan dijadikan tipe referensi untuk ArrayList<Produk> (teknik Polymorphism).
+
+## 2. Abstract Method
+- Ditambahkan method tanpa body di dalam Produk.java:
+  - public abstract double hitungOngkir();
+  - public abstract String getInfoDetail();
+- Abstract method tidak mempunyai body method.
+- Setiap subclass (MakananHewan, MakananKucing, Aksesoris) wajib meng-override method ini menggunakan @Override. Jika subclass bersifat concrete namun tidak mengimplementasikan abstract method, program akan gagal dikompilasi.
+  
+## 3. Interface (InfoProduk)
+- Dibuat file baru InfoProduk.java yang berisi 2 method tanpa body:
+  - String getKategori();
+  - String getCiriKhas();
+- Interface tidak memiliki constructor dan tidak bisa menyimpan state, hanya berfungsi sebagai kontrak perilaku.
+  
+## 4. Kombinasi Abstract Class & Interface
+- Produk mengimplementasi interface sekaligus mewariskan kontrak ke turunannya:
+public abstract class Produk implements InfoProduk
+- Karena Produk bersifat abstract, deklarasi method interface diturunkan ke subclass. Setiap subclass concrete harus mengisi total 4 abstract method:
+  - hitungOngkir() (dari Produk)
+  - getInfoDetail() (dari Produk)
+  - getKategori() (dari InfoProduk)
+  - getCiriKhas() (dari InfoProduk)
+
+## Fitur Program tambahan 
+- Validasi Arsitektur Ketat: Program kini memaksa developer untuk mendefinisikan detail spesifik (ongkir, kategori, ciri khas) di setiap subclass. Tidak ada class yang bisa "menghindar" dari kontrak ini.
+- Dinamis di Kasir: Saat simulasi belanja, sistem otomatis menyesuaikan informasi ongkir dan detail produk berdasarkan tipe barang yang dipilih. Ini membuktikan bahwa Abstraction, Interface, dan Polymorphism berjalan beriringan tanpa perlu pengecekan tipe manual (instanceof) untuk memanggil method khusus.
+
+## SS program
+1.  ![Menampilkan_Struk](./screenshot/Struk.png)
+
+Hnya menampilkan itu karena outputnya sama saja seperti di posttest sebelumnya yang berubah hanya di codenya saja, SSan tersebut hanya agar mengetahui bahwa codenya bisa dijalankan dan tidak error.
